@@ -137,6 +137,11 @@ const resume = {
                 [],
                 '434 problems solved across 1,313 submissions: 251 easy, 171 medium, 12 hard.'
             ),
+            subsection(
+                'Driving',
+                [],
+                'Learning manual, adept at automatic, and struggling with parallel parking'
+            )
         ]),
     ],
 };
