@@ -24,7 +24,6 @@ const section = (title, subsections) => {
 const subsection = (title, info, description) => {
     const div = document.createElement('div');
     const t = document.createElement('b');
-    console.log(title)
     t.innerHTML = title;
     div.appendChild(t);
     if (info.length > 0)
