@@ -5,7 +5,7 @@ const heading = (title, info) => {
     div.appendChild(h);
     for (let i = 0; i < info.length; i++) {
         if (i > 0) div.innerHTML += ' | ';
-        div.appendChild(link(...info[i]));
+        div.appendChild(info[i]);
     }
     return div;
 }

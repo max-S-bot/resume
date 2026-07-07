@@ -1,21 +1,9 @@
 const resume = {
     heading: heading('Max Schwarz', [
-        [
-            'mailto:mxz.schwarz@gmail.com', 
-            'mxz.schwarz@gmail.com',
-        ],
-        [
-            'tel:+15109923830',
-            '(510) 992-3830',
-        ],
-        [
-            'https://github.com/max-s-bot',
-            'github.com/max-S-bot',
-        ],
-        [
-            'https://leetcode.com/mxz-schwarz',
-            'leetcode.com/mxz-schwarz',
-        ],
+        link('mailto:mxz.schwarz@gmail.com', 'mxz.schwarz@gmail.com'),
+        link('tel:+15109923830', '(510) 992-3830'),
+        link('https://github.com/max-s-bot', 'github.com/max-S-bot'),
+        link('https://leetcode.com/mxz-schwarz', 'leetcode.com/mxz-schwarz'),
     ]),
     sections: [
         section('Education', [
