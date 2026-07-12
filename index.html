@@ -14,12 +14,10 @@
 <body>
     <script src="script.js"></script>
     <script src="resume.js"></script>
-    <script>
-        window.addEventListener('load', () => {
-            document.body.appendChild(resume.heading);
-            for (const s of resume.sections)
-                document.body.appendChild(s);
-        });
+    <script defer>
+        document.body.appendChild(resume.heading);
+        for (const s of resume.sections)
+        document.body.appendChild(s);
     </script>
 </body>
 </html>
