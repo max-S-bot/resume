@@ -1,0 +1,15 @@
+#!/bin/env node
+
+import * as fs from 'fs';
+import * as readline from 'readline/promises';
+
+const resume = JSON.parse(fs.readFileSync('./resume.json'));
+
+const rl = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout,
+});
+
+
+
+rl.close()
