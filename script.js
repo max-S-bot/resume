@@ -5,7 +5,7 @@ const heading = (title, info) => {
     div.appendChild(h);
     for (let i = 0; i < info.length; i++) {
         if (i > 0) div.innerHTML += ' | ';
-        div.appendChild(info[i]);
+        div.innerHTML += link(...info[i]);
     }
     return div;
 }
@@ -17,13 +17,16 @@ const section = (title, subsections) => {
     h.innerHTML = title;
     div.appendChild(h);
     for (const s of subsections)
-        div.appendChild(s);
+        div.appendChild(subsection(...s));
     return div;
 };
 
 const subsection = (title, info, description) => {
     const div = document.createElement('div');
     const t = document.createElement('b');
+    if (t)
+    if (title instanceof Object) 
+        title = link(...title.args)
     t.innerHTML = title;
     div.appendChild(t);
     if (info.length > 0)
@@ -44,5 +47,10 @@ const link = (url, name) => {
     a.target = '_blank';
     a.href = url;
     a.innerHTML = name; 
-    return a;
+    return a.outerHTML;
 };
+
+const resume = await ((await fetch('resume.json')).json())
+document.body.appendChild(heading(...resume.heading));
+for (const s of resume.sections)
+    document.body.appendChild(section(...s));
